@@ -1,5 +1,4 @@
 ﻿using GeradorDadosCcontabeis.Models;
-using GeradorDadosCcontabeis.Models.Enums;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

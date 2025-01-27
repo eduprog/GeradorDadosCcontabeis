@@ -1,23 +1,25 @@
+using System.Collections.Generic;
+
 namespace GeradorDadosCcontabeis.dadosiniciais
 {
     public class CstsIpiSql : ISql
     {
         public ICollection<string> Sql { get; set; } = new List<string>
         {
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('00', 'ENTRADA COM RECUPERAÇÃO DE CRÉDITO', 0, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('01', 'ENTRADA TRIBUTÁVEL COM ALÍQUOTA ZERO', 0, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('02', 'ENTRADA ISENTA', 0, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('03', 'ENTRADA NÃO-TRIBUTADA', 0, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('04', 'ENTRADA IMUNE', 0 , TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('05', 'ENTRADA COM SUSPENSÃO', 0, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('49', 'OUTRAS ENTRADAS', 0, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('50', 'SAÍDA TRIBUTADA', 1, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('51', 'SAÍDA TRIBUTÁVEL COM ALÍQUOTA ZERO', 1, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('52', 'SAÍDA ISENTA', 1, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('53', 'SAÍDA NÃO-TRIBUTADA', 1, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('54', 'SAÍDA IMUNE', 1, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('55', 'SAÍDA COM SUSPENSÃO', 1, TRUE);",
-            "INSERT INTO CST_IPI (CODIGO, DESCRICAO, APLICACAO, ATIVO) VALUES ('99', 'OUTRAS SAÍDAS', 1, TRUE);"
+"           INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('fad27308-563e-4ead-a35b-3543bc14cfda'::uuid, '00', 'ENTRADA COM RECUPERAÇÃO DE CRÉDITO', 0, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.272', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('b486ba80-bc08-4276-9323-53bc7f51a102'::uuid, '01', 'ENTRADA TRIBUTÁVEL COM ALÍQUOTA ZERO', 0, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.273', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('1a7b23cd-9ce0-4a50-a672-beaa78e27ec0'::uuid, '02', 'ENTRADA ISENTA', 0, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.273', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('a0f0d13c-4c3e-4d11-af15-47cda2ddb4f4'::uuid, '03', 'ENTRADA NÃO-TRIBUTADA', 0, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.274', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('4997a683-7b13-45ac-b360-2ff802ec0008'::uuid, '04', 'ENTRADA IMUNE', 0, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.274', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('210e3a51-59c3-49c6-98fa-5a6ce6c83166'::uuid, '05', 'ENTRADA COM SUSPENSÃO', 0, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.274', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('cfa469e1-f05d-42e0-a754-d636622acb22'::uuid, '49', 'OUTRAS ENTRADAS', 0, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.274', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('e7f6d481-f1c8-4113-add1-0fff9ca0d5b9'::uuid, '50', 'SAÍDA TRIBUTADA', 1, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.274', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('34c9db3a-abef-4105-a02e-8813d6ee97f6'::uuid, '51', 'SAÍDA TRIBUTÁVEL COM ALÍQUOTA ZERO', 1, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.275', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('6c0ed9a2-62ed-4dfe-9b87-1a47b9e262ad'::uuid, '52', 'SAÍDA ISENTA', 1, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.275', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('86d9785c-a748-41aa-a532-81654d5e969f'::uuid, '53', 'SAÍDA NÃO-TRIBUTADA', 1, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.275', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('5fedf9f4-abc8-4636-84c1-57e56a6bd6b2'::uuid, '54', 'SAÍDA IMUNE', 1, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.275', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('bed8a8fc-e2b5-4acc-a0d9-4e8195f65c8a'::uuid, '55', 'SAÍDA COM SUSPENSÃO', 1, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.275', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+"INSERT INTO cst_ipi (id, codigo, descricao, aplicacao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('cd5f2b17-aa79-4d63-8243-a0376b5c4472'::uuid, '99', 'OUTRAS SAÍDAS', 1, true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.275', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); "
         };
     }
 }

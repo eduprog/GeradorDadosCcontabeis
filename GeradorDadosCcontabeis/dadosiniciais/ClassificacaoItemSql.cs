@@ -1,21 +1,23 @@
-﻿namespace GeradorDadosCcontabeis.dadosiniciais
+﻿using System.Collections.Generic;
+
+namespace GeradorDadosCcontabeis.dadosiniciais
 {
     public class ClassificacaoItemSql : ISql
     {
         public ICollection<string> Sql { get; set; } = new List<string>
         {
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('00', 'MERCADORIA PARA REVENDA.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('01', 'MATÉRIA-PRIMA.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('02', 'EMBALAGEM.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('03', 'PRODUTO EM PROCESSO.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('04', 'PRODUTO ACABADO.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('05', 'SUBPRODUTO.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('06', 'PRODUTO INTERMEDIÁRIO.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('07', 'MATERIAL DE USO E CONSUMO.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('08', 'ATIVO IMOBILIZADO.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('09', 'SERVIÇOS.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('10', 'OUTROS INSUMOS.', TRUE);",
-            "INSERT INTO CLASSIFICACAO_ITEM (CODIGO, DESCRICAO, ATIVO) VALUES ('99', 'OUTRAS.', TRUE);"
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('f848f561-cec7-42ba-912a-99cd542b93b5'::uuid, '00', 'MERCADORIA PARA REVENDA.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.206', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL); ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('ba1aec6d-cd3b-41d3-a579-57d6f422fce5'::uuid, '01', 'MATÉRIA-PRIMA.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.210', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);                      ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('507156ee-61e5-4a1b-a4ad-029e7447dddb'::uuid, '02', 'EMBALAGEM.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.210', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);                          ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('ec62c3a5-afd8-43cb-aad0-8064cb4b550b'::uuid, '03', 'PRODUTO EM PROCESSO.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.210', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);                ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('bf4573b4-77aa-4386-b32f-6398f9dfa61d'::uuid, '04', 'PRODUTO ACABADO.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.211', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);                    ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('2b48803e-0bbb-4293-b1eb-8ae3496724e6'::uuid, '05', 'SUBPRODUTO.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.211', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);                         ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('c7930c8a-41cb-480d-aeaf-a84f48cbd9a7'::uuid, '06', 'PRODUTO INTERMEDIÁRIO.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.211', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);              ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('5037bab5-34fc-4204-9241-ae9f06b98464'::uuid, '07', 'MATERIAL DE USO E CONSUMO.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.211', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);          ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('18da86c0-8a71-45ff-a581-f8d833401148'::uuid, '08', 'ATIVO IMOBILIZADO.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.211', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);                  ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('df1be0f3-f7fc-4b47-92a2-b757c35b6218'::uuid, '09', 'SERVIÇOS.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.211', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);                           ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('580b1f46-6c0a-4e8b-bc33-6c789da9d5b6'::uuid, '10', 'OUTROS INSUMOS.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.212', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);                     ",
+            "INSERT INTO classificacao_item (id, codigo, descricao, ativo, created_by, created_on, modified_by, modified_on, deleted_by, deleted_on) VALUES('5a6858df-7ee5-471c-8394-74fd06203fd0'::uuid, '99', 'OUTRAS.', true, '00000000-0000-0000-0000-000000000000'::uuid, '2025-01-27 16:45:14.212', '00000000-0000-0000-0000-000000000000'::uuid, NULL, NULL, NULL);                             "
         };
     }
 }

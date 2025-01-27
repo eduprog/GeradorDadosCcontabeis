@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace GeradorDadosCcontabeis;
 
-public class AppDbContext : DbContext
+public class AppDbContext(string nomeEsquema,string strConnection) : DbContext
 {
 
 
@@ -32,7 +32,7 @@ public class AppDbContext : DbContext
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
-        modelBuilder.HasDefaultSchema("esistem");
+        modelBuilder.HasDefaultSchema(nomeEsquema);
         modelBuilder.ApplyConfiguration(new CestMapping());
         modelBuilder.ApplyConfiguration(new CfopMapping());
         modelBuilder.ApplyConfiguration(new ClassificacaoItemMapping());
@@ -50,7 +50,7 @@ public class AppDbContext : DbContext
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
         base.OnConfiguring(optionsBuilder);
-        optionsBuilder.UseNpgsql(Program.StrConnection);
+        optionsBuilder.UseNpgsql(strConnection);
 
     }
 }
